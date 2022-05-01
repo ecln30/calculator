@@ -1,7 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  body{
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     
+ }  
+  .board {
+      width: 1440px;
+      height: 1020px;
+      background: hsl(224, 27%, 29%);
+      display: flex;
+      padding: 50px;
+      justify-content: center;
+      align-items: center;
+      margin: 50px 50px;
+      
+  }
+
+.contianer{
+    width: 500px;
+    height: 650px;
+    background: rgb(52, 59, 77);
+    margin: 50px auto;
+}
+
+.head {
+    width: 500px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.calc {
+    margin-top: 23px;
+}
+
+.theme {
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+}
+
+.color {
+    margin-top: 23px;
+}
+
+.slide {
+    width: 80px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    
+}
 
 
+.icon {
+    width: 60px;
+    height: 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background:hsl(224, 38%, 8%);
+}
 
+.ball {
+    width:13px;
+    height:13px;
+    background: red;
+    border-radius: 50%;
 
+}
+
+input {
+   
+    width: 500px;
+    height: 100px;
+    background: hsl(224, 38%, 8%);
+    border:none;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 40px;
+    text-align: right;
+    padding: 30px;
+
+}
+
+.buttons {
+
+    width: 500px;
+    height: 420px;
+    background:  hsl(219, 30%, 17%);
+    display: grid;
+    grid-template-columns: repeat(4, 100px) ;
+    grid-template-rows: repeat(5, 60px);
+    gap: 15px 15px;
+    margin-top: 20px;
+    padding: 31px 28px;
+    border-radius: 5px;
+    
+}
+
+.button {
+   
+    background: rgb(243, 237, 237);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+.button.del {
+    background:hsl(225, 21%, 49%);
+    box-shadow:  hsl(224, 28%, 35%);
+    color: white;
+}
+
+.button.reset{
+    font-size: 25px;
+    grid-column: 1 / 3;
+    color: white;
+    background:hsl(225, 21%, 49%);
+    box-shadow:  hsl(224, 28%, 35%);
+}
+
+.button.redot {
+    grid-column: 3 / 5;
+    background: hsl(6, 70%, 34%);
+    box-shadow: hsl(6, 70%, 34%) ;
+    color: white;
+    font-size: 50px;
+   
+}
+
+.square {
+    width: 10px;
+   height: 10px;
+    background: white;
+}
 
 
 
