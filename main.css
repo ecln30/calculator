@@ -59,7 +59,6 @@
     
 }
 
-
 .icon {
     width: 60px;
     height: 20px;
@@ -77,7 +76,7 @@
 
 }
 
-input {
+.input {
    
     width: 500px;
     height: 100px;
@@ -86,9 +85,9 @@ input {
     outline: none;
     border-radius: 5px;
     color: white;
-    font-size: 40px;
+    font-size: 50px;
     text-align: right;
-    padding: 30px;
+    padding: 15px 30px;
 
 }
 
@@ -104,6 +103,7 @@ input {
     margin-top: 20px;
     padding: 31px 28px;
     border-radius: 5px;
+    cursor: pointer
     
 }
 
@@ -119,6 +119,7 @@ input {
 }
 
 .button.del {
+
     background:hsl(225, 21%, 49%);
     box-shadow:  hsl(224, 28%, 35%);
     color: white;
@@ -138,7 +139,7 @@ input {
     box-shadow: hsl(6, 70%, 34%) ;
     color: white;
     font-size: 50px;
-   
+    
 }
 
 .square {
