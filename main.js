@@ -46,13 +46,12 @@ function display(e) {
      } else if ( operation === true) {
          
           input.textContent = "" 
-          let newValue = value
-          input.textContent = newValue
+          input.textContent = value
           operation = false
      } else if (resultDisplayed == true) {
           
           input.textContent = ""
-          input.value = num
+          input.textContent = value
           resultDisplayed = false
      } 
 
