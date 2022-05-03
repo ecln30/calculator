@@ -41,19 +41,12 @@ function display(e) {
          preValue = parseFloat(currentValue)
          operation = true
          operator = ops
-         
     }
 
-    if( input.textContent === "NaN" || input.textContent) {
-        input.textContent = input.textContent.replace("NaN", "0")
-    }
-    
-    
     if ( ops === "equal" || el.matches("span")) {
              
-             newValue = parseFloat(input.textContent.replace("value", ""))
-     
-              Evaluate(preValue, newValue, operator)
+        newValue = parseFloat(input.textContent.replace("value", ""))
+        Evaluate(preValue, newValue, operator)
     }
     else if ( ops === "del"){
          input.textContent = currentValue.replace("del", "")
@@ -65,7 +58,6 @@ function display(e) {
     else if( ops === "reset" ) {
           input.textContent = "0"
     }
-   
 }
 
 function Evaluate(a, b, c) {
@@ -83,7 +75,6 @@ function Evaluate(a, b, c) {
          input.textContent = a * b
      }
       resultDisplayed = true
-     
 }
 
 
