@@ -1,37 +1,16 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const buttons = document.querySelectorAll(".button")
 const input = document.querySelector(".input")
 const del = document.querySelector(".del")
 
-let preValue
-let newValue
-let operator
+let preValue 
+let newValue 
+let operator 
 let operation = false
 let resultDisplayed = false
-let num = ""
 
 buttons.forEach(item => {
     item.addEventListener("click", display)
 })
-
-window.document.addEventListener("click", getValue )
-function getValue(e){
-     num = e.target.dataset.id
-     console.log(num)
-}
 
 function display(e) {
      const el = e.target
@@ -48,6 +27,7 @@ function display(e) {
           input.textContent = "" 
           input.textContent = value
           operation = false
+         
      } else if (resultDisplayed == true) {
           
           input.textContent = ""
@@ -63,17 +43,24 @@ function display(e) {
          operator = ops
          
     }
-   
-    if ( ops === "eqal" || el.matches("span")) {
-          
-         newValue = parseFloat(input.textContent.replace("value", ""))
-        
-         Evaluate(preValue, newValue, operator)
 
-    } 
+    if( input.textContent === "NaN" || input.textContent) {
+        input.textContent = input.textContent.replace("NaN", "0")
+    }
+    
+    
+    if ( ops === "equal" || el.matches("span")) {
+             
+             newValue = parseFloat(input.textContent.replace("value", ""))
+     
+              Evaluate(preValue, newValue, operator)
+    }
     else if ( ops === "del"){
          input.textContent = currentValue.replace("del", "")
          input.textContent = currentValue.slice(0, -1)
+         if( input.textContent.length <= 0) {
+             input.textContent = "0"
+         }
     }
     else if( ops === "reset" ) {
           input.textContent = "0"
@@ -96,7 +83,7 @@ function Evaluate(a, b, c) {
          input.textContent = a * b
      }
       resultDisplayed = true
-    
+     
 }
 
 
